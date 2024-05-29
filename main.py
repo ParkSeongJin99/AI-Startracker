@@ -194,10 +194,17 @@ def main():
     if not args.no_date:
         timestamp = datetime.datetime.now().strftime("%m_%d-%H_%M")
         save_path = os.path.join(timestamp, save_path)
-    save_path = os.path.join(args.dataset, save_path)
+    
+    #상위폴더 식별
+    par_dir=os.path.dirname(os.getcwd())
+    #save_path = os.path.join(args.dataset, save_path)
+    
+    #Vessl의 dataset폴더의 "trained model"폴더에 저장
+    save_path = os.path.join(par_dir,"input","trained_model", save_path)
     print("=> will save everything to {}".format(save_path))
     if not os.path.exists(save_path):
-        os.makedirs(save_path)
+        #os.makedirs(save_path)
+        os.makedirs(save_path, exist_ok=True)
 
     if args.split_seed is not None:
         np.random.seed(args.split_seed)
