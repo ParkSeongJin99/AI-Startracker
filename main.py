@@ -205,7 +205,7 @@ def main():
     if not os.path.exists(save_path):
         #os.makedirs(save_path)
         os.makedirs(save_path, exist_ok=True)
-
+        print("Save folder generation")
     if args.split_seed is not None:
         np.random.seed(args.split_seed)
 
