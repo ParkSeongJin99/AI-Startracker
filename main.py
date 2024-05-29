@@ -1,5 +1,5 @@
 #import Colab version
-
+#use argparse 
 
 import argparse
 import os
@@ -20,7 +20,6 @@ from torch.utils.tensorboard import SummaryWriter
 from util import flow2rgb, AverageMeter, save_checkpoint
 import numpy as np
 import matplotlib.pyplot as plt
-import easydict
 import time
 
 
