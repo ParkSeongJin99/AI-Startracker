@@ -200,7 +200,7 @@ def main():
     #save_path = os.path.join(args.dataset, save_path)
     
     #Vessl의 dataset폴더의 "trained model"폴더에 저장
-    save_path = os.path.join(par_dir,"input","trained_model", save_path)
+    save_path = os.path.join(par_dir,"output","trained_model", save_path)
     print("=> will save everything to {}".format(save_path))
     if not os.path.exists(save_path):
         #os.makedirs(save_path)
